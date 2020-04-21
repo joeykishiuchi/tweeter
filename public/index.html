@@ -15,12 +15,14 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/post-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
@@ -30,7 +32,7 @@
     </nav>
 
     <!-- Logged in user -->
-    <header>
+    <header id="profile-header">
       <img id="header-bg"src="/images/header-background.png">
       <div id="avatar">
           <img src="/images/profile-hex.png">
@@ -54,62 +56,20 @@
         </form>
       </section>
 
-      <p>Ornare nisi maecenas orci at urna consequat luctu
-        s pellentesque magnis ligula euismod. Aptent lectu
-        s sollicitudin cum auctor venenatis ullamcorper au
-        gue tortor faucibus tristique vivamus vulputate. C
-        ubilia vel dui ullamcorper bibendum. Leo tincidunt 
-        habitant blandit eros, suscipit non aenean auctor p
-        haretra elementum accumsan! Ultricies odio conubia
-        semper ad adipiscing non ac!</p>
-      <p>Ornare nisi maecenas orci at urna consequat luctu
-        s pellentesque magnis ligula euismod. Aptent lectu
-        s sollicitudin cum auctor venenatis ullamcorper au
-        gue tortor faucibus tristique vivamus vulputate. C
-        ubilia vel dui ullamcorper bibendum. Leo tincidunt 
-        habitant blandit eros, suscipit non aenean auctor p
-        haretra elementum accumsan! Ultricies odio conubia
-          semper ad adipiscing non ac!</p>
-      <p>Ornare nisi maecenas orci at urna consequat luctu
-      s pellentesque magnis ligula euismod. Aptent lectu
-      s sollicitudin cum auctor venenatis ullamcorper au
-      gue tortor faucibus tristique vivamus vulputate. C
-      ubilia vel dui ullamcorper bibendum. Leo tincidunt 
-      habitant blandit eros, suscipit non aenean auctor p
-      haretra elementum accumsan! Ultricies odio conubia
-        semper ad adipiscing non ac!</p>
-      <p>Ornare nisi maecenas orci at urna consequat luctu
-        s pellentesque magnis ligula euismod. Aptent lectu
-        s sollicitudin cum auctor venenatis ullamcorper au
-        gue tortor faucibus tristique vivamus vulputate. C
-        ubilia vel dui ullamcorper bibendum. Leo tincidunt 
-        habitant blandit eros, suscipit non aenean auctor p
-        haretra elementum accumsan! Ultricies odio conubia
-          semper ad adipiscing non ac!</p>
-      <p>Ornare nisi maecenas orci at urna consequat luctu
-        s pellentesque magnis ligula euismod. Aptent lectu
-        s sollicitudin cum auctor venenatis ullamcorper au
-        gue tortor faucibus tristique vivamus vulputate. C
-        ubilia vel dui ullamcorper bibendum. Leo tincidunt 
-        habitant blandit eros, suscipit non aenean auctor p
-        haretra elementum accumsan! Ultricies odio conubia
-          semper ad adipiscing non ac!</p>
-      <p>Ornare nisi maecenas orci at urna consequat luctu
-        s pellentesque magnis ligula euismod. Aptent lectu
-        s sollicitudin cum auctor venenatis ullamcorper au
-        gue tortor faucibus tristique vivamus vulputate. C
-        ubilia vel dui ullamcorper bibendum. Leo tincidunt 
-        habitant blandit eros, suscipit non aenean auctor p
-        haretra elementum accumsan! Ultricies odio conubia
-          semper ad adipiscing non ac!</p>
-      <p>Ornare nisi maecenas orci at urna consequat luctu
-        s pellentesque magnis ligula euismod. Aptent lectu
-        s sollicitudin cum auctor venenatis ullamcorper au
-        gue tortor faucibus tristique vivamus vulputate. C
-        ubilia vel dui ullamcorper bibendum. Leo tincidunt 
-        habitant blandit eros, suscipit non aenean auctor p
-        haretra elementum accumsan! Ultricies odio conubia
-          semper ad adipiscing non ac!</p>
+      <section id="tweet-container">
+        <article class="tweet">
+          <header>
+            <img class="hover-effect"src="https://i.imgur.com/nlhLi3I.png">
+            <h5 class="name hover-effect">Rhoda Jones<h5>
+            <h5 class="tag">@MsJones</h5>
+          </header>
+          <span class="message hover-effect">This is a tweet. Tweet Tweet Tweet!</span>
+          <footer>
+            <span class="date hover-effect">10 days ago</span>
+          </footer>
+        </article>
+      </section>
+  
     </main>
   </body>
 </html>
