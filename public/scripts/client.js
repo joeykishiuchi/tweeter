@@ -10,46 +10,31 @@ const formatDate = function(timestamp) {
   return date;
 };
 
-const createTweetElement = function(data) {
-  const time = formatDate(data.created_at);
-  let newTweet = `<article class="tweet">
-    <header>
-      <img class="hover-effect" src=${data.user.avatars}>
-      <h5 class="name hover-effect">${data.user.name}<h5>
-      <h5 class="tag">${data.user.handle}</h5>
-    </header>
-    <span class="message hover-effect">${data.content.text}</span>
-    <footer>
-      <span class="date hover-effect">${time}</span>
-    </footer>
-  </article>`
-
-  return $(newTweet);
-}
-
 const renderTweets = function(database) {
   for (const data of database) {
     const $tweet = createTweetElement(data);
-    $('#tweet-container').append($tweet);
+    // Adds new tweets to the top of the container
+    $('#tweet-container').prepend($tweet);
   }
 };
 
 const loadTweets = function() {
-  $.ajax('/tweets', {method: 'GET'})
+  $.getJSON('/tweets',)
   .then(function(tweets) {
-    $('#tweet-container').prepend(createTweetElement(tweets[tweets.length - 1]));
+    renderTweets(tweets);
   });
 };
+// Loads and displays all tweets in database when page is opened
+loadTweets();
 
-$(document).ready(() => {
-
-  $("form").submit(function() {
-    event.preventDefault();
-    $.ajax('/tweets', { method: 'POST', data: $(this).serialize() }).
-    then(function() {
-      loadTweets();
-    });
-    $(this).find('#tweet-text').val('');
+$("form").submit(function(event) {
+  event.preventDefault();
+  $.post('/tweets', $(this).serialize()).
+  then(function() {
+    // empties the tweet container so that the database isn't added to the previously loaded database
+    $('#tweet-container').empty();
+    loadTweets();
   });
-
+  // Resets the form so that the input is empty
+  $(this)[0].reset();
 });
