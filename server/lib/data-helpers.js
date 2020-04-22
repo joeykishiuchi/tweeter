@@ -10,7 +10,7 @@ module.exports = function makeDataHelpers(db) {
     // Saves a tweet to `db`
     saveTweet: function(newTweet, callback) {
       simulateDelay(() => {
-        db.tweets.unshift(newTweet);
+        db.tweets.push(newTweet);
         callback(null, true);
       });
     },
