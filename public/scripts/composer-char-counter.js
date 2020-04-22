@@ -11,8 +11,4 @@ $(document).ready(function() {
   $("#tweet-text").on('keydown', setCounterColor);
   $("#tweet-text").on('keyup', setCounterColor);
   $("#tweet-text").on('paste', setCounterColor);
-  // resets counter to 140 when tweet is submitted
-  $('form').submit(function() {
-    $(this).children('.counter').text(140);
-  });
 })

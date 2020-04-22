@@ -6,7 +6,6 @@
 
 const formatDate = function(timestamp) {
   const date = new Date(timestamp);
-  console.log(date);
   return date;
 };
 
@@ -29,12 +28,20 @@ loadTweets();
 
 $("form").submit(function(event) {
   event.preventDefault();
-  $.post('/tweets', $(this).serialize()).
-  then(function() {
-    // empties the tweet container so that the database isn't added to the previously loaded database
-    $('#tweet-container').empty();
-    loadTweets();
-  });
-  // Resets the form so that the input is empty
-  $(this)[0].reset();
+  const charCounter = $(this).children('.counter').text();
+  if (Number(charCounter < 0)) {
+      alert('That\'s too many characters');
+  } else {
+    $.post('/tweets', $(this).serialize())
+    .then(function() {
+      // empties the tweet container so that the database isn't added to the previously loaded database
+      $('#tweet-container').empty();
+      loadTweets();
+    });
+    
+    // Resets counter to 140 when tweet is submitted
+    $(this).children('.counter').text(140);
+    // Resets input to empty when form is submitted
+    $(this)[0].reset();
+  }
 });
