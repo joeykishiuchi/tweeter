@@ -11,3 +11,15 @@ nav {
   top: 0;
 }
 
+.compose-toggle {
+  float: right;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  color: #cfcfcf;
+}
+
+.compose-toggle:hover {
+  color: white;
+}
+
