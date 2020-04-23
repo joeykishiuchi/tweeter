@@ -11,6 +11,7 @@ section h2 {
 
 form {
   height: 110px;
+  margin-top: 20px;
 }
 
 label {
@@ -60,4 +61,13 @@ form button:hover {
   overflow: hidden;
   resize: none;
   outline: none;
+}
+
+#char-limit-err {
+  display: none;
+  font-size: 20px;
+  border: 1px solid red;
+  color: red;
+  padding: 4px 7px; 
+
 }

@@ -46,7 +46,8 @@
     <main class="container">
 
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        <h2 >Compose Tweet</h2>
+        <span id="char-limit-err">&#9888; This is an error message</span>
         <form action="/tweets" method="POST">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
@@ -55,11 +56,11 @@
         </form>
       </section>
 
-      <section id="tweet-container">
-        
-      </section>
+      <section id="tweet-container"></section>
   
     </main>
+    <script type="text/javascript" src="/scripts/xxs-escape.js"></script>
+    <script type="text/javascript" src="/scripts/new-tweet-template.js"></script>
     <script type="text/javascript" src="/scripts/client.js"></script>
   </body>
 </html>
