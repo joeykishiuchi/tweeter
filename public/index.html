@@ -47,7 +47,8 @@
 
       <section class="new-tweet">
         <h2 >Compose Tweet</h2>
-        <span id="char-limit-err">&#9888; This is an error message</span>
+        <p class='error-message' id="char-limit-err">&#9888; CHARACTER LIMIT HAS BEEN EXCEEDED</p>
+        <p class='error-message' id="empty-input-err">&#9888; TEXT FIELD IS EMPTY</p>
         <form action="/tweets" method="POST">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>

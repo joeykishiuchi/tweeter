@@ -1,17 +1,13 @@
 .new-tweet {
   width: 700px;
   margin: 0 auto;
+  margin-bottom: 100px;
   position: relative;
   padding-bottom: 30px;
 }
 
 section h2 {
   text-align: center;
-}
-
-form {
-  height: 110px;
-  margin-top: 20px;
 }
 
 label {
@@ -63,11 +59,8 @@ form button:hover {
   outline: none;
 }
 
-#char-limit-err {
+.error-message {
   display: none;
   font-size: 20px;
-  border: 1px solid red;
   color: red;
-  padding: 4px 7px; 
-
 }
