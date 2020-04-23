@@ -4,11 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const formatDate = function(timestamp) {
-  const date = new Date(timestamp);
-  return date;
-};
-
 const renderTweets = function(database) {
   for (const data of database) {
     const $tweet = createTweetElement(data);

@@ -64,3 +64,8 @@
   margin: 10px;
 }
 
+.tweet .reaction-icons {
+  float: right;
+  word-spacing: 2px;
+}
+
