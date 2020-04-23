@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/post-tweet.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/to-top-btn.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/scroll-btn.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -46,7 +46,9 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-
+      <!-- Scroll back-to-top button -->
+      <span id="scroll-btn"> &#8963; </span>
+      <!-- Contains the form for composing new tweets -->
       <section class="new-tweet">
         <h2 >Compose Tweet</h2>
         <p class='error-message' id="char-limit-err">&#9888; YOU EXCEEDED THE CHARACTER LIMIT</p>
@@ -58,10 +60,10 @@
           <output name="counter" class="counter" for="tweet-text">140</output>
         </form>
       </section>
-
+      <!-- Container to hold and display posted tweets -->
       <section id="tweet-container"></section>
-      <span>&#708;</span>
     </main>
+    <script type="text/javascript" src="/scripts/scroll-btn.js"></script>
     <script type="text/javascript" src="/scripts/toggle-compose-form.js"></script>
     <script type="text/javascript" src="/scripts/xxs-escape.js"></script>
     <script type="text/javascript" src="/scripts/new-tweet-template.js"></script>
