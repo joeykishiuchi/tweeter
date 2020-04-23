@@ -8,7 +8,7 @@ const createTweetElement = function(data) {
       <h5 class="name hover-effect">${data.user.name}<h5>
       <h5 class="tag">${data.user.handle}</h5>
     </header>
-    <span class="message hover-effect">${data.content.text}</span>
+    <span class="message hover-effect">${escape(data.content.text)}</span>
     <footer>
       <span class="date hover-effect">${time}</span>
     </footer>
