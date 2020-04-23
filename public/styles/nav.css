@@ -1,7 +1,6 @@
 /* Style sheet for navigation bar */
 
 nav {
-  background-color: #4056A1;
   color: #FFFFFF;
   width: 100%;
   padding: 1.5em;
@@ -9,6 +8,12 @@ nav {
   z-index: 10;
   position: fixed;
   top: 0;
+}
+
+@media (min-width: 1100px) {
+  nav {
+    background-color: #4056A1;
+  }
 }
 
 .compose-toggle {

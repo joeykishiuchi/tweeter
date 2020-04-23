@@ -1,4 +1,5 @@
 #scroll-btn {
+  display: none;
   z-index: 100;
   position: fixed;
   color: white;
@@ -7,7 +8,7 @@
   border-radius: 50%;
   margin: 10px auto;
   bottom: 30px;
-  left: 63%;
+  left: 85%;
   padding:0 11px;
   padding-top: 10px;
   opacity: 0.8;

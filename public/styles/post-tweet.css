@@ -1,5 +1,11 @@
+#tweet-container {
+  width: 50%;
+  margin: 0 auto;
+  min-width: 600px;
+}
+
 .tweet {
-  width: 700px;
+  width: 100%;
   margin: 20px auto;
   border: 3px solid #545149;
   padding: 10px;
@@ -36,7 +42,7 @@
 .tweet header .tag {
   float: right;
   top: 22px;
-  color: lightgray;
+  color: #bababa;
   opacity: 0;
 }
 
