@@ -1,12 +1,3 @@
-// formats timestamp to date
-// const formatDate = function(timestamp) {
-//   const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'Novemebr', 'December' ];
-//   const month = new Date(timestamp).getMonth();
-//   const day = new Date(timestamp).getUTCDate();
-//   const year = new Date(timestamp).getFullYear();
-//   return `${months[month]} ${day}, ${year}`;
-// };
-
 // Creates a new instance of a tweet to be added to the tweet-container
 const createTweetElement = function(data) {
   const date = new Date(data.created_at);
@@ -22,6 +13,6 @@ const createTweetElement = function(data) {
       <span class="date hover-effect">${timeAgo}</span>
       <span class="reaction-icons hover-effect">&#9873; &#8630; &#9829;</span>
     </footer>
-  </article>`
+  </article>`;
   return $(newTweet);
-}
+};

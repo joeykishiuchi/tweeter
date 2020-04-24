@@ -52,6 +52,8 @@
 
 .tweet .message {
   margin-bottom: 1em;
+  width: 100%;
+  overflow-wrap: break-word;
 }
 
 .tweet footer {
@@ -66,6 +68,7 @@
 
 .tweet .reaction-icons {
   float: right;
+  color: #4056A1;
   word-spacing: 2px;
 }
 

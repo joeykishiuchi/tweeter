@@ -6,12 +6,13 @@ nav {
   padding: 1.5em;
   height: 90px;
   z-index: 10;
-  position: fixed;
+  position: absolute;
   top: 0;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1024px) {
   nav {
+    position: fixed;
     background-color: #4056A1;
   }
 }
