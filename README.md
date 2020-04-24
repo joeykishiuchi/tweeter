@@ -4,8 +4,8 @@ Tweeter is a simple, single-page Twitter clone project for Lighthouse Labs.
 
 ## Final Product
 
-!["Smaller Device Window"](https://github.com/joeykishiuchi/tweeter/blob/master/public/images/Screen%20Shot%202020-04-23%20at%209.48.44%20PM.png?raw=true)
-!["Larger Device Window"](https://github.com/joeykishiuchi/tweeter/blob/master/public/images/Screen%20Shot%202020-04-23%20at%209.51.29%20PM.png?raw=true)
+!["Smaller Device Window"](https://github.com/joeykishiuchi/tweeter/blob/master/public/images/small-window.png?raw=true)
+!["Larger Device Window"](https://github.com/joeykishiuchi/tweeter/blob/master/public/images/large-window.png?raw=true)
 
 ## Getting Started
 
