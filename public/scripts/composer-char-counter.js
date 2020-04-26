@@ -7,9 +7,9 @@ $(document).ready(function() {
   const setCounterColor = function() {
     let charCount = 140 - $(this).val().length;
     if (charCount < 0) {
-      $(this).siblings('.counter').text(charCount).css('color','red');
+      $(this).siblings('#counter').text(charCount).removeClass('counter-black').addClass('counter-red');
     } else {
-      $(this).siblings('.counter').text(charCount).css('color','#545149');
+      $(this).siblings('#counter').text(charCount).removeClass('counter-red').addClass('counter-black');
       $('#char-limit-err').slideUp(slideToggle);
       $('#empty-input-err').slideUp(slideToggle);
     }

@@ -36,12 +36,22 @@ form button:hover {
   font-size: 18px;
 }
 
-.counter {
+.counter-black {
   display: block;
   position: relative;
   float: right;
   top: 45px;
   font-family: 'Bungee', sans-serif;
+  color: #545149;
+}
+
+.counter-red{
+  display: block;
+  position: relative;
+  float: right;
+  top: 45px;
+  font-family: 'Bungee', sans-serif;
+  color: red;
 }
 
 #tweet-text {

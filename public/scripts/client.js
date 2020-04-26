@@ -24,7 +24,7 @@ loadTweets();
 $("form").submit(function(event) {
   event.preventDefault();
   const inputText = $(this).children('#tweet-text').val();
-  const charCount = $(this).children('.counter').val();
+  const charCount = $(this).children('#counter').val();
   if (inputText.length === 0 ) {
     // Displays error message if the textarea is empty
     $('#empty-input-err').slideDown(slideToggle);
