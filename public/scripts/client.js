@@ -23,14 +23,15 @@ loadTweets();
 
 $("form").submit(function(event) {
   event.preventDefault();
-  const slideToggle = {
-    duration: 250,
-    easing: 'linear'
-  };
   const inputText = $(this).children('#tweet-text').val();
+  const charCount = $(this).children('.counter').val();
   if (inputText.length === 0 ) {
     // Displays error message if the textarea is empty
     $('#empty-input-err').slideDown(slideToggle);
+    $('#char-limit-err').slideUp(slideToggle);
+  } else if (charCount < 0) {
+    $('#empty-input-err').slideUp(slideToggle);
+    $('#char-limit-err').slideDown(slideToggle)
   } else {
     $.post('/tweets', $(this).serialize())
     .then(function() {
@@ -39,6 +40,7 @@ $("form").submit(function(event) {
       loadTweets();
     });
     $('#empty-input-err').slideUp(slideToggle);
+    $('#char-limit-err').slideUp(slideToggle);
     // Resets counter to 140 when tweet is submitted
     $(this).children('.counter').text(140);
     // Resets input to empty when form is submitted
